@@ -33,6 +33,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanelFullWindow = new System.Windows.Forms.TableLayoutPanel();
@@ -66,12 +69,26 @@
             this.btnLevelAdd = new System.Windows.Forms.Button();
             this.tabPageRoles = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.dgvRoles = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnRoleDelete = new System.Windows.Forms.Button();
             this.btnRoleAdd = new System.Windows.Forms.Button();
             this.btnRoleEdit = new System.Windows.Forms.Button();
+            this.dgvRoles = new System.Windows.Forms.DataGridView();
             this.labelHeaderRoles = new System.Windows.Forms.Label();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.btnRolePeopleDelete = new System.Windows.Forms.Button();
+            this.btnRolePeopleAdd = new System.Windows.Forms.Button();
+            this.dgvRolesPeople = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.btnReqDelete = new System.Windows.Forms.Button();
+            this.btnRoleReqAdd = new System.Windows.Forms.Button();
+            this.dgvRoleReq = new System.Windows.Forms.DataGridView();
             this.tabPageUsers = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -101,6 +118,11 @@
             this.rDisplayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pPersonRefDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pFirstNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pLastNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roleXPersonBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.roleXReqBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -109,6 +131,10 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataAccessBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.skillCategoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.slLevelDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.slDisplayDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanelFullWindow.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPagePeople.SuspendLayout();
@@ -123,8 +149,16 @@
             this.panel4.SuspendLayout();
             this.tabPageRoles.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRoles)).BeginInit();
+            this.tableLayoutPanel3.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRoles)).BeginInit();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRolesPeople)).BeginInit();
+            this.tableLayoutPanel6.SuspendLayout();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRoleReq)).BeginInit();
             this.tabPageUsers.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -133,6 +167,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.skillBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.skillLevelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roleXPersonBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roleXReqBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataAccessBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.skillCategoryBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -166,7 +202,7 @@
             this.tableLayoutPanelFullWindow.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 78F));
             this.tableLayoutPanelFullWindow.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.81688F));
             this.tableLayoutPanelFullWindow.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 131F));
-            this.tableLayoutPanelFullWindow.Size = new System.Drawing.Size(980, 580);
+            this.tableLayoutPanelFullWindow.Size = new System.Drawing.Size(894, 448);
             this.tableLayoutPanelFullWindow.TabIndex = 4;
             // 
             // tabControl1
@@ -180,7 +216,7 @@
             this.tabControl1.Location = new System.Drawing.Point(3, 81);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(974, 496);
+            this.tabControl1.Size = new System.Drawing.Size(888, 364);
             this.tabControl1.TabIndex = 13;
             // 
             // tabPagePeople
@@ -189,7 +225,7 @@
             this.tabPagePeople.Location = new System.Drawing.Point(4, 22);
             this.tabPagePeople.Name = "tabPagePeople";
             this.tabPagePeople.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePeople.Size = new System.Drawing.Size(966, 470);
+            this.tabPagePeople.Size = new System.Drawing.Size(880, 338);
             this.tabPagePeople.TabIndex = 0;
             this.tabPagePeople.Text = "People";
             this.tabPagePeople.UseVisualStyleBackColor = true;
@@ -209,7 +245,7 @@
             this.tableLayoutPanelPerson.RowCount = 2;
             this.tableLayoutPanelPerson.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanelPerson.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelPerson.Size = new System.Drawing.Size(960, 464);
+            this.tableLayoutPanelPerson.Size = new System.Drawing.Size(874, 332);
             this.tableLayoutPanelPerson.TabIndex = 0;
             // 
             // dgvPeople
@@ -236,7 +272,7 @@
             this.dgvPeople.RowHeadersWidth = 20;
             this.dgvPeople.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvPeople.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPeople.Size = new System.Drawing.Size(874, 428);
+            this.dgvPeople.Size = new System.Drawing.Size(788, 296);
             this.dgvPeople.TabIndex = 13;
             // 
             // p_Active
@@ -253,9 +289,9 @@
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.btnEdit);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(883, 33);
+            this.panel1.Location = new System.Drawing.Point(797, 33);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(74, 428);
+            this.panel1.Size = new System.Drawing.Size(74, 296);
             this.panel1.TabIndex = 0;
             // 
             // btnDel
@@ -309,7 +345,7 @@
             this.tabPageSkills.Location = new System.Drawing.Point(4, 22);
             this.tabPageSkills.Name = "tabPageSkills";
             this.tabPageSkills.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSkills.Size = new System.Drawing.Size(966, 470);
+            this.tabPageSkills.Size = new System.Drawing.Size(880, 338);
             this.tabPageSkills.TabIndex = 1;
             this.tabPageSkills.Text = "Skills";
             this.tabPageSkills.UseVisualStyleBackColor = true;
@@ -332,7 +368,7 @@
             this.tableLayoutPanelSkills.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanelSkills.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanelSkills.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanelSkills.Size = new System.Drawing.Size(960, 464);
+            this.tableLayoutPanelSkills.Size = new System.Drawing.Size(874, 332);
             this.tableLayoutPanelSkills.TabIndex = 0;
             // 
             // labelHeaderSkillsTab
@@ -352,7 +388,7 @@
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Left;
             this.label1.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(483, 0);
+            this.label1.Location = new System.Drawing.Point(440, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 35);
             this.label1.TabIndex = 2;
@@ -381,7 +417,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvSkills.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvSkills.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSkills.Size = new System.Drawing.Size(474, 388);
+            this.dgvSkills.Size = new System.Drawing.Size(431, 256);
             this.dgvSkills.TabIndex = 3;
             this.dgvSkills.SelectionChanged += new System.EventHandler(this.dgvSkills_SelectionChanged);
             // 
@@ -423,9 +459,9 @@
             this.panelSkillsButtons.Controls.Add(this.btnSkillEdit);
             this.panelSkillsButtons.Controls.Add(this.btnSkillAdd);
             this.panelSkillsButtons.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelSkillsButtons.Location = new System.Drawing.Point(3, 432);
+            this.panelSkillsButtons.Location = new System.Drawing.Point(3, 300);
             this.panelSkillsButtons.Name = "panelSkillsButtons";
-            this.panelSkillsButtons.Size = new System.Drawing.Size(474, 29);
+            this.panelSkillsButtons.Size = new System.Drawing.Size(431, 29);
             this.panelSkillsButtons.TabIndex = 5;
             // 
             // btnSkillDelete
@@ -478,13 +514,13 @@
             this.slSkillIDDataGridViewTextBoxColumn});
             this.dgvSkillLevels.DataSource = this.skillLevelBindingSource;
             this.dgvSkillLevels.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvSkillLevels.Location = new System.Drawing.Point(483, 38);
+            this.dgvSkillLevels.Location = new System.Drawing.Point(440, 38);
             this.dgvSkillLevels.Name = "dgvSkillLevels";
             this.dgvSkillLevels.ReadOnly = true;
             this.dgvSkillLevels.RowHeadersWidth = 20;
             this.dgvSkillLevels.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvSkillLevels.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSkillLevels.Size = new System.Drawing.Size(474, 388);
+            this.dgvSkillLevels.Size = new System.Drawing.Size(431, 256);
             this.dgvSkillLevels.TabIndex = 6;
             // 
             // sl_ValidityDurationMonths
@@ -502,9 +538,9 @@
             this.panel4.Controls.Add(this.btnLevelEdit);
             this.panel4.Controls.Add(this.btnLevelAdd);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(483, 432);
+            this.panel4.Location = new System.Drawing.Point(440, 300);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(474, 29);
+            this.panel4.Size = new System.Drawing.Size(431, 29);
             this.panel4.TabIndex = 7;
             // 
             // btnLevelDelete
@@ -543,7 +579,7 @@
             this.tabPageRoles.Location = new System.Drawing.Point(4, 22);
             this.tabPageRoles.Name = "tabPageRoles";
             this.tabPageRoles.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageRoles.Size = new System.Drawing.Size(966, 470);
+            this.tabPageRoles.Size = new System.Drawing.Size(880, 338);
             this.tabPageRoles.TabIndex = 3;
             this.tabPageRoles.Text = "Roles";
             this.tabPageRoles.UseVisualStyleBackColor = true;
@@ -552,19 +588,78 @@
             // 
             this.tableLayoutPanel2.BackColor = System.Drawing.Color.OliveDrab;
             this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel2.Controls.Add(this.dgvRoles, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.panel5, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.labelHeaderRoles, 0, 0);
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel5, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(960, 464);
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 332F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(874, 332);
             this.tableLayoutPanel2.TabIndex = 2;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.BackColor = System.Drawing.Color.ForestGreen;
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Controls.Add(this.panel5, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.dgvRoles, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.labelHeaderRoles, 0, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 3;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(437, 332);
+            this.tableLayoutPanel3.TabIndex = 16;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.btnRoleDelete);
+            this.panel5.Controls.Add(this.btnRoleAdd);
+            this.panel5.Controls.Add(this.btnRoleEdit);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(3, 300);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(431, 29);
+            this.panel5.TabIndex = 14;
+            // 
+            // btnRoleDelete
+            // 
+            this.btnRoleDelete.Location = new System.Drawing.Point(137, 3);
+            this.btnRoleDelete.Name = "btnRoleDelete";
+            this.btnRoleDelete.Size = new System.Drawing.Size(60, 23);
+            this.btnRoleDelete.TabIndex = 2;
+            this.btnRoleDelete.Text = "Delete";
+            this.btnRoleDelete.UseVisualStyleBackColor = true;
+            this.btnRoleDelete.Click += new System.EventHandler(this.btnRoleDelete_Click);
+            // 
+            // btnRoleAdd
+            // 
+            this.btnRoleAdd.Location = new System.Drawing.Point(5, 3);
+            this.btnRoleAdd.Name = "btnRoleAdd";
+            this.btnRoleAdd.Size = new System.Drawing.Size(60, 23);
+            this.btnRoleAdd.TabIndex = 0;
+            this.btnRoleAdd.Text = "Add";
+            this.btnRoleAdd.UseVisualStyleBackColor = true;
+            this.btnRoleAdd.Click += new System.EventHandler(this.btnRoleAdd_Click);
+            // 
+            // btnRoleEdit
+            // 
+            this.btnRoleEdit.Location = new System.Drawing.Point(71, 3);
+            this.btnRoleEdit.Name = "btnRoleEdit";
+            this.btnRoleEdit.Size = new System.Drawing.Size(60, 23);
+            this.btnRoleEdit.TabIndex = 1;
+            this.btnRoleEdit.Text = "Edit";
+            this.btnRoleEdit.UseVisualStyleBackColor = true;
+            this.btnRoleEdit.Click += new System.EventHandler(this.btnRoleEdit_Click);
             // 
             // dgvRoles
             // 
@@ -580,58 +675,15 @@
             this.rDescriptionDataGridViewTextBoxColumn});
             this.dgvRoles.DataSource = this.roleBindingSource;
             this.dgvRoles.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvRoles.Location = new System.Drawing.Point(3, 33);
+            this.dgvRoles.Location = new System.Drawing.Point(3, 38);
             this.dgvRoles.Name = "dgvRoles";
             this.dgvRoles.ReadOnly = true;
             this.dgvRoles.RowHeadersWidth = 20;
             this.dgvRoles.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvRoles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRoles.Size = new System.Drawing.Size(874, 428);
+            this.dgvRoles.Size = new System.Drawing.Size(431, 256);
             this.dgvRoles.TabIndex = 13;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.btnRoleDelete);
-            this.panel5.Controls.Add(this.btnRoleAdd);
-            this.panel5.Controls.Add(this.btnRoleEdit);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(883, 33);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(74, 428);
-            this.panel5.TabIndex = 0;
-            // 
-            // btnRoleDelete
-            // 
-            this.btnRoleDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRoleDelete.Location = new System.Drawing.Point(11, 79);
-            this.btnRoleDelete.Name = "btnRoleDelete";
-            this.btnRoleDelete.Size = new System.Drawing.Size(60, 23);
-            this.btnRoleDelete.TabIndex = 2;
-            this.btnRoleDelete.Text = "Delete";
-            this.btnRoleDelete.UseVisualStyleBackColor = true;
-            this.btnRoleDelete.Click += new System.EventHandler(this.btnRoleDelete_Click);
-            // 
-            // btnRoleAdd
-            // 
-            this.btnRoleAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRoleAdd.Location = new System.Drawing.Point(11, 21);
-            this.btnRoleAdd.Name = "btnRoleAdd";
-            this.btnRoleAdd.Size = new System.Drawing.Size(60, 23);
-            this.btnRoleAdd.TabIndex = 0;
-            this.btnRoleAdd.Text = "Add";
-            this.btnRoleAdd.UseVisualStyleBackColor = true;
-            this.btnRoleAdd.Click += new System.EventHandler(this.btnRoleAdd_Click);
-            // 
-            // btnRoleEdit
-            // 
-            this.btnRoleEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRoleEdit.Location = new System.Drawing.Point(11, 50);
-            this.btnRoleEdit.Name = "btnRoleEdit";
-            this.btnRoleEdit.Size = new System.Drawing.Size(60, 23);
-            this.btnRoleEdit.TabIndex = 1;
-            this.btnRoleEdit.Text = "Edit";
-            this.btnRoleEdit.UseVisualStyleBackColor = true;
-            this.btnRoleEdit.Click += new System.EventHandler(this.btnRoleEdit_Click);
+            this.dgvRoles.SelectionChanged += new System.EventHandler(this.dgvRoles_SelectionChanged);
             // 
             // labelHeaderRoles
             // 
@@ -640,10 +692,197 @@
             this.labelHeaderRoles.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHeaderRoles.Location = new System.Drawing.Point(3, 0);
             this.labelHeaderRoles.Name = "labelHeaderRoles";
-            this.labelHeaderRoles.Size = new System.Drawing.Size(55, 30);
-            this.labelHeaderRoles.TabIndex = 1;
+            this.labelHeaderRoles.Size = new System.Drawing.Size(55, 35);
+            this.labelHeaderRoles.TabIndex = 2;
             this.labelHeaderRoles.Text = "Roles";
             this.labelHeaderRoles.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 1;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel4, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 0, 1);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(437, 0);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 2;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(437, 332);
+            this.tableLayoutPanel5.TabIndex = 17;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.BackColor = System.Drawing.Color.PaleGreen;
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.panel7, 0, 2);
+            this.tableLayoutPanel4.Controls.Add(this.dgvRolesPeople, 0, 1);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 3;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(437, 166);
+            this.tableLayoutPanel4.TabIndex = 17;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label2.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 35);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "People";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.btnRolePeopleDelete);
+            this.panel7.Controls.Add(this.btnRolePeopleAdd);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(3, 134);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(431, 29);
+            this.panel7.TabIndex = 17;
+            // 
+            // btnRolePeopleDelete
+            // 
+            this.btnRolePeopleDelete.Location = new System.Drawing.Point(137, 3);
+            this.btnRolePeopleDelete.Name = "btnRolePeopleDelete";
+            this.btnRolePeopleDelete.Size = new System.Drawing.Size(60, 23);
+            this.btnRolePeopleDelete.TabIndex = 2;
+            this.btnRolePeopleDelete.Text = "Delete";
+            this.btnRolePeopleDelete.UseVisualStyleBackColor = true;
+            this.btnRolePeopleDelete.Click += new System.EventHandler(this.btnRolePeopleDelete_Click);
+            // 
+            // btnRolePeopleAdd
+            // 
+            this.btnRolePeopleAdd.Location = new System.Drawing.Point(5, 3);
+            this.btnRolePeopleAdd.Name = "btnRolePeopleAdd";
+            this.btnRolePeopleAdd.Size = new System.Drawing.Size(60, 23);
+            this.btnRolePeopleAdd.TabIndex = 0;
+            this.btnRolePeopleAdd.Text = "Add";
+            this.btnRolePeopleAdd.UseVisualStyleBackColor = true;
+            this.btnRolePeopleAdd.Click += new System.EventHandler(this.btnRolePeopleAdd_Click);
+            // 
+            // dgvRolesPeople
+            // 
+            this.dgvRolesPeople.AllowUserToAddRows = false;
+            this.dgvRolesPeople.AllowUserToDeleteRows = false;
+            this.dgvRolesPeople.AllowUserToOrderColumns = true;
+            this.dgvRolesPeople.AutoGenerateColumns = false;
+            this.dgvRolesPeople.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvRolesPeople.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRolesPeople.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.pPersonRefDataGridViewTextBoxColumn1,
+            this.pFirstNameDataGridViewTextBoxColumn1,
+            this.pLastNameDataGridViewTextBoxColumn1});
+            this.dgvRolesPeople.DataSource = this.roleXPersonBindingSource;
+            this.dgvRolesPeople.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvRolesPeople.Location = new System.Drawing.Point(3, 38);
+            this.dgvRolesPeople.Name = "dgvRolesPeople";
+            this.dgvRolesPeople.ReadOnly = true;
+            this.dgvRolesPeople.RowHeadersWidth = 20;
+            this.dgvRolesPeople.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvRolesPeople.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvRolesPeople.Size = new System.Drawing.Size(431, 90);
+            this.dgvRolesPeople.TabIndex = 18;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.BackColor = System.Drawing.Color.LimeGreen;
+            this.tableLayoutPanel6.ColumnCount = 1;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.Controls.Add(this.label4, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.panel9, 0, 2);
+            this.tableLayoutPanel6.Controls.Add(this.dgvRoleReq, 0, 1);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 166);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 3;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(437, 166);
+            this.tableLayoutPanel6.TabIndex = 17;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label4.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(226, 35);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Requirements for the role";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.btnReqDelete);
+            this.panel9.Controls.Add(this.btnRoleReqAdd);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.Location = new System.Drawing.Point(3, 134);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(431, 29);
+            this.panel9.TabIndex = 17;
+            // 
+            // btnReqDelete
+            // 
+            this.btnReqDelete.Location = new System.Drawing.Point(137, 3);
+            this.btnReqDelete.Name = "btnReqDelete";
+            this.btnReqDelete.Size = new System.Drawing.Size(60, 23);
+            this.btnReqDelete.TabIndex = 2;
+            this.btnReqDelete.Text = "Delete";
+            this.btnReqDelete.UseVisualStyleBackColor = true;
+            this.btnReqDelete.Click += new System.EventHandler(this.btnReqDelete_Click);
+            // 
+            // btnRoleReqAdd
+            // 
+            this.btnRoleReqAdd.Location = new System.Drawing.Point(5, 3);
+            this.btnRoleReqAdd.Name = "btnRoleReqAdd";
+            this.btnRoleReqAdd.Size = new System.Drawing.Size(60, 23);
+            this.btnRoleReqAdd.TabIndex = 0;
+            this.btnRoleReqAdd.Text = "Add";
+            this.btnRoleReqAdd.UseVisualStyleBackColor = true;
+            this.btnRoleReqAdd.Click += new System.EventHandler(this.btnRoleReqAdd_Click);
+            // 
+            // dgvRoleReq
+            // 
+            this.dgvRoleReq.AllowUserToAddRows = false;
+            this.dgvRoleReq.AllowUserToDeleteRows = false;
+            this.dgvRoleReq.AllowUserToOrderColumns = true;
+            this.dgvRoleReq.AutoGenerateColumns = false;
+            this.dgvRoleReq.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvRoleReq.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRoleReq.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.dataGridViewTextBoxColumn7,
+            this.slLevelDataGridViewTextBoxColumn1,
+            this.slDisplayDataGridViewTextBoxColumn1});
+            this.dgvRoleReq.DataSource = this.roleXReqBindingSource;
+            this.dgvRoleReq.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvRoleReq.Location = new System.Drawing.Point(3, 38);
+            this.dgvRoleReq.Name = "dgvRoleReq";
+            this.dgvRoleReq.ReadOnly = true;
+            this.dgvRoleReq.RowHeadersWidth = 20;
+            this.dgvRoleReq.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvRoleReq.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvRoleReq.Size = new System.Drawing.Size(431, 90);
+            this.dgvRoleReq.TabIndex = 18;
             // 
             // tabPageUsers
             // 
@@ -651,7 +890,7 @@
             this.tabPageUsers.Location = new System.Drawing.Point(4, 22);
             this.tabPageUsers.Name = "tabPageUsers";
             this.tabPageUsers.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageUsers.Size = new System.Drawing.Size(966, 470);
+            this.tabPageUsers.Size = new System.Drawing.Size(880, 338);
             this.tabPageUsers.TabIndex = 2;
             this.tabPageUsers.Text = "Users";
             this.tabPageUsers.UseVisualStyleBackColor = true;
@@ -671,7 +910,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(960, 464);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(874, 332);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // dataGridView1
@@ -695,7 +934,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(3, 33);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(874, 428);
+            this.dataGridView1.Size = new System.Drawing.Size(788, 296);
             this.dataGridView1.TabIndex = 13;
             // 
             // dataGridViewCheckBoxColumn1
@@ -713,9 +952,9 @@
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.button3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(883, 33);
+            this.panel3.Location = new System.Drawing.Point(797, 33);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(74, 428);
+            this.panel3.Size = new System.Drawing.Size(74, 296);
             this.panel3.TabIndex = 0;
             // 
             // button1
@@ -755,7 +994,7 @@
             this.labelHeaderUserTab.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHeaderUserTab.Location = new System.Drawing.Point(3, 0);
             this.labelHeaderUserTab.Name = "labelHeaderUserTab";
-            this.labelHeaderUserTab.Size = new System.Drawing.Size(874, 30);
+            this.labelHeaderUserTab.Size = new System.Drawing.Size(788, 30);
             this.labelHeaderUserTab.TabIndex = 1;
             this.labelHeaderUserTab.Text = "Person list";
             // 
@@ -926,6 +1165,41 @@
             // 
             this.roleBindingSource.DataSource = typeof(Competence.Role);
             // 
+            // pPersonRefDataGridViewTextBoxColumn1
+            // 
+            this.pPersonRefDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.pPersonRefDataGridViewTextBoxColumn1.DataPropertyName = "p_PersonRef";
+            this.pPersonRefDataGridViewTextBoxColumn1.FillWeight = 20F;
+            this.pPersonRefDataGridViewTextBoxColumn1.HeaderText = "p_PersonRef";
+            this.pPersonRefDataGridViewTextBoxColumn1.Name = "pPersonRefDataGridViewTextBoxColumn1";
+            this.pPersonRefDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // pFirstNameDataGridViewTextBoxColumn1
+            // 
+            this.pFirstNameDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.pFirstNameDataGridViewTextBoxColumn1.DataPropertyName = "p_FirstName";
+            this.pFirstNameDataGridViewTextBoxColumn1.FillWeight = 40F;
+            this.pFirstNameDataGridViewTextBoxColumn1.HeaderText = "p_FirstName";
+            this.pFirstNameDataGridViewTextBoxColumn1.Name = "pFirstNameDataGridViewTextBoxColumn1";
+            this.pFirstNameDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // pLastNameDataGridViewTextBoxColumn1
+            // 
+            this.pLastNameDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.pLastNameDataGridViewTextBoxColumn1.DataPropertyName = "p_LastName";
+            this.pLastNameDataGridViewTextBoxColumn1.FillWeight = 40F;
+            this.pLastNameDataGridViewTextBoxColumn1.HeaderText = "p_LastName";
+            this.pLastNameDataGridViewTextBoxColumn1.Name = "pLastNameDataGridViewTextBoxColumn1";
+            this.pLastNameDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // roleXPersonBindingSource
+            // 
+            this.roleXPersonBindingSource.DataSource = typeof(Competence.RoleXPerson);
+            // 
+            // roleXReqBindingSource
+            // 
+            this.roleXReqBindingSource.DataSource = typeof(Competence.RoleXReq);
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -989,12 +1263,53 @@
             // 
             this.skillCategoryBindingSource.DataSource = typeof(Competence.SkillCategory);
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "req_ID";
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "s_Display";
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewTextBoxColumn7.FillWeight = 40F;
+            this.dataGridViewTextBoxColumn7.HeaderText = "Skill";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // slLevelDataGridViewTextBoxColumn1
+            // 
+            this.slLevelDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.slLevelDataGridViewTextBoxColumn1.DataPropertyName = "sl_Level";
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.slLevelDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle6;
+            this.slLevelDataGridViewTextBoxColumn1.FillWeight = 20F;
+            this.slLevelDataGridViewTextBoxColumn1.HeaderText = "Level";
+            this.slLevelDataGridViewTextBoxColumn1.Name = "slLevelDataGridViewTextBoxColumn1";
+            this.slLevelDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // slDisplayDataGridViewTextBoxColumn1
+            // 
+            this.slDisplayDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.slDisplayDataGridViewTextBoxColumn1.DataPropertyName = "sl_Display";
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.slDisplayDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle7;
+            this.slDisplayDataGridViewTextBoxColumn1.FillWeight = 40F;
+            this.slDisplayDataGridViewTextBoxColumn1.HeaderText = "Display";
+            this.slDisplayDataGridViewTextBoxColumn1.Name = "slDisplayDataGridViewTextBoxColumn1";
+            this.slDisplayDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
             // CompetenceUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(980, 580);
+            this.ClientSize = new System.Drawing.Size(894, 448);
             this.Controls.Add(this.tableLayoutPanelFullWindow);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.textBox1);
@@ -1019,9 +1334,19 @@
             this.panel4.ResumeLayout(false);
             this.tabPageRoles.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRoles)).EndInit();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRoles)).EndInit();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRolesPeople)).EndInit();
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel6.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRoleReq)).EndInit();
             this.tabPageUsers.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -1031,6 +1356,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.skillBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.skillLevelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roleXPersonBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roleXReqBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataAccessBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.skillCategoryBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -1106,15 +1433,39 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn slSkillIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.TabPage tabPageRoles;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.DataGridView dgvRoles;
+        private System.Windows.Forms.BindingSource roleBindingSource;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnRoleDelete;
         private System.Windows.Forms.Button btnRoleAdd;
         private System.Windows.Forms.Button btnRoleEdit;
-        private System.Windows.Forms.Label labelHeaderRoles;
-        private System.Windows.Forms.BindingSource roleBindingSource;
+        private System.Windows.Forms.DataGridView dgvRoles;
         private System.Windows.Forms.DataGridViewTextBoxColumn rDisplayDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rDescriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label labelHeaderRoles;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button btnRolePeopleDelete;
+        private System.Windows.Forms.Button btnRolePeopleAdd;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Button btnReqDelete;
+        private System.Windows.Forms.Button btnRoleReqAdd;
+        private System.Windows.Forms.DataGridView dgvRolesPeople;
+        private System.Windows.Forms.DataGridView dgvRoleReq;
+        private System.Windows.Forms.BindingSource roleXPersonBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pPersonRefDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pFirstNameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pLastNameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.BindingSource roleXReqBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn reqCommentsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn slLevelDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn slDisplayDataGridViewTextBoxColumn1;
     }
 }
 

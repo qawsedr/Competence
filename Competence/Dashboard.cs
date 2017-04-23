@@ -55,7 +55,6 @@ namespace Competence
             }
         }
 
-
         private void btnPersonEdit_Click(object sender, EventArgs e)
         {
             Person obj = personBindingSource.Current as Person;
@@ -223,10 +222,65 @@ namespace Competence
             Role obj = roleBindingSource.Current as Role;
             if (obj != null)
             {
-                if (MessageBox.Show(string.Format("Please confirm the removal of skill '{0}' from the list.", obj.r_Display), "Deleting record", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                if (MessageBox.Show(string.Format("Please confirm the removal of role '{0}' from the list.", obj.r_Display), "Deleting record", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                 {
                     db.DeleteRole(obj);
                     roleBindingSource.RemoveCurrent();
+                }
+            }
+        }
+
+        private void dgvRoles_SelectionChanged(object sender, EventArgs e)
+        {
+            roleXPersonBindingSource.DataSource = db.GetRoleXPerson(roleBindingSource.Current as Role);
+            roleXReqBindingSource.DataSource = db.GetReq(roleBindingSource.Current as Role);
+        }
+
+        private void btnRolePeopleAdd_Click(object sender, EventArgs e)
+        {
+            using (ReqPersonSelectForm frm = new ReqPersonSelectForm()
+            { r = roleBindingSource.Current as Role, rXp = new RoleXPerson(), bs = roleXPersonBindingSource })
+            {
+                if (frm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                }
+            }
+        }
+
+        private void btnRolePeopleDelete_Click(object sender, EventArgs e)
+        {
+            RoleXPerson obj = roleXPersonBindingSource.Current as RoleXPerson;
+            if (obj != null)
+            {
+                if (MessageBox.Show(string.Format("Please confirm the removal of person '{0} {1}' from the role of '{2}'.", obj.p_FirstName, obj.p_LastName, obj.r_Display), "Deleting record", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    db.DeleteRoleXPerson(obj);
+                    roleXPersonBindingSource.RemoveCurrent();
+                }
+            }
+        }
+
+        private void btnRoleReqAdd_Click(object sender, EventArgs e)
+        {
+            using (ReqSkillLevelSelectForm frm = new ReqSkillLevelSelectForm()
+            { r = roleBindingSource.Current as Role, rXreq = new RoleXReq(), bs = roleXReqBindingSource })
+            {
+                if (frm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                }
+            }
+        }
+
+        private void btnReqDelete_Click(object sender, EventArgs e)
+        {
+            RoleXReq obj = roleXReqBindingSource.Current as RoleXReq;
+            //roleXReqBindingSource.Current as RoleXReq;
+            if (obj != null)
+            {
+                if (MessageBox.Show(string.Format("Please confirm the removal of skill '{0} - {1}' from the role '{2}.", obj.s_Display, obj.sl_Display, obj.r_Display), "Deleting record", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    db.DeleteRoleXReq(obj);
+                    roleXReqBindingSource.RemoveCurrent();
                 }
             }
         }

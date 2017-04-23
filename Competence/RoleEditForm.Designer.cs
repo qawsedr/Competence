@@ -44,6 +44,24 @@
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
+            // labelRoleDescription
+            // 
+            labelRoleDescription.AutoSize = true;
+            labelRoleDescription.Location = new System.Drawing.Point(13, 41);
+            labelRoleDescription.Name = "labelRoleDescription";
+            labelRoleDescription.Size = new System.Drawing.Size(63, 13);
+            labelRoleDescription.TabIndex = 2;
+            labelRoleDescription.Text = "Description:";
+            // 
+            // labelRoleDisplay
+            // 
+            labelRoleDisplay.AutoSize = true;
+            labelRoleDisplay.Location = new System.Drawing.Point(13, 15);
+            labelRoleDisplay.Name = "labelRoleDisplay";
+            labelRoleDisplay.Size = new System.Drawing.Size(44, 13);
+            labelRoleDisplay.TabIndex = 10;
+            labelRoleDisplay.Text = "Display:";
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
@@ -71,15 +89,6 @@
             this.panel1.Size = new System.Drawing.Size(343, 137);
             this.panel1.TabIndex = 0;
             // 
-            // labelRoleDescription
-            // 
-            labelRoleDescription.AutoSize = true;
-            labelRoleDescription.Location = new System.Drawing.Point(13, 41);
-            labelRoleDescription.Name = "labelRoleDescription";
-            labelRoleDescription.Size = new System.Drawing.Size(63, 13);
-            labelRoleDescription.TabIndex = 2;
-            labelRoleDescription.Text = "Description:";
-            // 
             // TextDescription
             // 
             this.TextDescription.Location = new System.Drawing.Point(110, 38);
@@ -87,15 +96,6 @@
             this.TextDescription.Name = "TextDescription";
             this.TextDescription.Size = new System.Drawing.Size(230, 44);
             this.TextDescription.TabIndex = 2;
-            // 
-            // labelRoleDisplay
-            // 
-            labelRoleDisplay.AutoSize = true;
-            labelRoleDisplay.Location = new System.Drawing.Point(13, 15);
-            labelRoleDisplay.Name = "labelRoleDisplay";
-            labelRoleDisplay.Size = new System.Drawing.Size(44, 13);
-            labelRoleDisplay.TabIndex = 10;
-            labelRoleDisplay.Text = "Display:";
             // 
             // TextDisplay
             // 
@@ -137,6 +137,7 @@
             // 
             // RoleEditForm
             // 
+            this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(446, 261);

@@ -13,9 +13,17 @@ namespace Competence
     {
         public List<Person> GetPeople()
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("CompetenceDB")))
+            try
             {
-                return connection.Query<Person>("dbo.spPeopleGet").ToList();
+                using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("CompetenceDB")))
+                {
+                    return connection.Query<Person>("dbo.spPeopleGet").ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
             }
         }
 
@@ -37,35 +45,155 @@ namespace Competence
             }
         }
 
-        public object GetRoles()
+        public void InsertRequirement(RoleXReq rXreq)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("CompetenceDB")))
+            try
             {
-                return connection.Query<Role>("dbo.spRolesGet").ToList();
+                using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("CompetenceDB")))
+                {
+                    //List < { int, int}> personList = new List<{ int, int}>();
+                    //personList.Add(p);
+                    connection.Execute("dbo.spReqInsert @req_SkillLevelID, @req_RoleID", new { req_SkillLevelID = rXreq.req_SkillLevelID, req_RoleID = rXreq.req_RoleID });
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public object GetReqInverse(Role r)
+        {
+            try
+            {
+                using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("CompetenceDB")))
+                {
+                    return connection.Query<SkillLevel>("dbo.spReqInverseGet @RoleID", new { RoleID = r.r_ID }).ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+
+        public object GetPeoplePXR(Role r)
+        {
+            try
+            {
+                using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("CompetenceDB")))
+                {
+                    return connection.Query<Person>("dbo.spPeoplePXRGet @RoleID", new { RoleID = r.r_ID }).ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+
+        public object GetReq(Role r)
+        {
+            try
+            {
+                using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("CompetenceDB")))
+                {
+                    return connection.Query<RoleXReq>("dbo.spReqRoleGet @RoleID", new { RoleID = r.r_ID }).ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+
+        public void InsertRoleXPerson(RoleXPerson rXp)
+        {
+            try
+            {
+                using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("CompetenceDB")))
+                {
+                    //List < { int, int}> personList = new List<{ int, int}>();
+                    //personList.Add(p);
+                    connection.Execute("dbo.spRolesPeopleAdd @x_PersonID, @x_RoleID", new { x_PersonID = rXp.p_ID, x_RoleID = rXp.r_ID });
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public List<Role> GetRoles()
+        {
+            try
+            {
+                using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("CompetenceDB")))
+                {
+                    return connection.Query<Role>("dbo.spRolesGet").ToList();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
             }
         }
 
         public List<SkillCategory> GetSkillCategories()
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("CompetenceDB")))
+            try
             {
-                return connection.Query<SkillCategory>("dbo.spSkillCategoriesGet").ToList();
+                using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("CompetenceDB")))
+                {
+                    return connection.Query<SkillCategory>("dbo.spSkillCategoriesGet").ToList();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
             }
         }
 
-        public object SkillLevelEnumGet()
+        public List<SkillLevelEnum> SkillLevelEnumGet()
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("CompetenceDB")))
+            try
             {
-                return connection.Query<SkillLevelEnum>("dbo.spSkillLevelEnumGet").ToList();
+                using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("CompetenceDB")))
+                {
+                    return connection.Query<SkillLevelEnum>("dbo.spSkillLevelEnumGet").ToList();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
             }
         }
 
         public List<Skill> GetSkills()
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("CompetenceDB")))
+            try
             {
-                return connection.Query<Skill>("dbo.spSkillsGet").ToList();
+                using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("CompetenceDB")))
+                {
+                    return connection.Query<Skill>("dbo.spSkillsGet").ToList();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
             }
         }
 
@@ -122,13 +250,22 @@ namespace Competence
 
         public List<SkillLevel> GetSkillLevels(Skill s)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("CompetenceDB")))
+            try
             {
-                if (s != null)
+                using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("CompetenceDB")))
                 {
-                    return connection.Query<SkillLevel>("dbo.spSkillLevelGet @sl_SkillID, @sl_Active", new { sl_SkillID = s.s_ID , sl_Active = true } ).ToList();
+                    if (s != null)
+                    {
+                        return connection.Query<SkillLevel>("dbo.spSkillLevelGet @sl_SkillID, @sl_Active", new { sl_SkillID = s.s_ID, sl_Active = true }).ToList();
+                    }
+                    else return null;
                 }
-                else return null;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
             }
         }
 
@@ -201,15 +338,65 @@ namespace Competence
             }
         }
 
-        public void DeleteRole(Role obj)
+        public void DeleteRoleXReq(RoleXReq obj)
         {
             try
             {
                 using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("CompetenceDB")))
                 {
-                    //List<Role> roleList = new List<Role>();
-                    //roleList.Add(obj);
+                    connection.Execute("dbo.spReqDelete @req_ID", new { req_ID = obj.req_ID });
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+    
+
+    public void DeleteRole(Role obj)
+        {
+            try
+            {
+                using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("CompetenceDB")))
+                {
                     connection.Execute("dbo.spRoleDelete @r_ID", new { r_ID = obj.r_ID });
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public List<RoleXPerson> GetRoleXPerson(Role role)
+        {
+            try
+            {
+                using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("CompetenceDB")))
+                {
+                    if (role != null)
+                    {
+                        // Set parameter value = 0 to get all values
+                        return connection.Query<RoleXPerson>("dbo.spRolesPeopleGet @x_RoleID, @x_PersonID", new { x_RoleID = role.r_ID, x_PersonID = 0 }).ToList();
+                    }
+                    else return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+
+        public void DeleteRoleXPerson(RoleXPerson obj)
+        {
+            try
+            {
+                using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("CompetenceDB")))
+                {
+                    connection.Execute("dbo.spRoleXPersonDelete @x_ID", new { x_ID = obj.x_ID });
                 }
             }
             catch (Exception ex)

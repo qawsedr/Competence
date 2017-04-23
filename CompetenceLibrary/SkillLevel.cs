@@ -17,5 +17,6 @@ namespace Competence
         public int? sl_ValidityDurationMonths { get; set; }
         public int? sl_TrainingDocumentID { get; set; }
         public bool sl_Active { get; set; } = true;
+        public string s_Display { get; }
     }
 }

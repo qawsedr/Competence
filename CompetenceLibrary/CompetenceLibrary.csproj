@@ -49,8 +49,11 @@
     <Compile Include="DataAccess.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Helper.cs" />
+    <Compile Include="PersonPXR.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Role.cs" />
+    <Compile Include="RoleXReq.cs" />
+    <Compile Include="RoleXPerson.cs" />
     <Compile Include="Skill.cs" />
     <Compile Include="SkillCategory.cs" />
     <Compile Include="SkillLevel.cs" />
