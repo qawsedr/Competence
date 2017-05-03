@@ -36,13 +36,20 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanelFullWindow = new System.Windows.Forms.TableLayoutPanel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPagePeople = new System.Windows.Forms.TabPage();
             this.tableLayoutPanelPerson = new System.Windows.Forms.TableLayoutPanel();
             this.dgvPeople = new System.Windows.Forms.DataGridView();
+            this.pIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pPersonRefDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pFirstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pLastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pDisplayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.p_Active = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnDel = new System.Windows.Forms.Button();
@@ -54,15 +61,25 @@
             this.labelHeaderSkillsTab = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvSkills = new System.Windows.Forms.DataGridView();
+            this.sIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.s_Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.s_Display = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.s_Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.skillBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panelSkillsButtons = new System.Windows.Forms.Panel();
             this.btnSkillDelete = new System.Windows.Forms.Button();
             this.btnSkillEdit = new System.Windows.Forms.Button();
             this.btnSkillAdd = new System.Windows.Forms.Button();
             this.dgvSkillLevels = new System.Windows.Forms.DataGridView();
+            this.slLevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.slIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.slDisplayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.slDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sl_ValidityDurationMonths = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.slTrainingDocumentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.slOrderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.slSkillIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.skillLevelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnLevelDelete = new System.Windows.Forms.Button();
             this.btnLevelEdit = new System.Windows.Forms.Button();
@@ -75,6 +92,9 @@
             this.btnRoleAdd = new System.Windows.Forms.Button();
             this.btnRoleEdit = new System.Windows.Forms.Button();
             this.dgvRoles = new System.Windows.Forms.DataGridView();
+            this.rDisplayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.labelHeaderRoles = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -83,15 +103,27 @@
             this.btnRolePeopleDelete = new System.Windows.Forms.Button();
             this.btnRolePeopleAdd = new System.Windows.Forms.Button();
             this.dgvRolesPeople = new System.Windows.Forms.DataGridView();
+            this.roleXPersonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.btnReqDelete = new System.Windows.Forms.Button();
             this.btnRoleReqAdd = new System.Windows.Forms.Button();
             this.dgvRoleReq = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.slLevelDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.slDisplayDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roleXReqBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPageUsers = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -99,42 +131,12 @@
             this.button3 = new System.Windows.Forms.Button();
             this.labelHeaderUserTab = new System.Windows.Forms.Label();
             this.LabelApplicationHeader = new System.Windows.Forms.Label();
-            this.pIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pPersonRefDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pFirstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pLastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pDisplayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.skillBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.slLevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.slIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.slDisplayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.slDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.slTrainingDocumentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.slOrderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.slSkillIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.skillLevelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rDisplayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataAccessBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.skillCategoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pPersonRefDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pFirstNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pLastNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roleXPersonBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.roleXReqBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataAccessBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.skillCategoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.slLevelDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.slDisplayDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
             this.tableLayoutPanelFullWindow.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPagePeople.SuspendLayout();
@@ -144,31 +146,30 @@
             this.tabPageSkills.SuspendLayout();
             this.tableLayoutPanelSkills.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSkills)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.skillBindingSource)).BeginInit();
             this.panelSkillsButtons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSkillLevels)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.skillLevelBindingSource)).BeginInit();
             this.panel4.SuspendLayout();
             this.tabPageRoles.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoles)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRolesPeople)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roleXPersonBindingSource)).BeginInit();
             this.tableLayoutPanel6.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoleReq)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roleXReqBindingSource)).BeginInit();
             this.tabPageUsers.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.skillBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.skillLevelBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roleXPersonBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roleXReqBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataAccessBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.skillCategoryBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -180,6 +181,10 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(200, 22);
             this.textBox1.TabIndex = 1;
+            // 
+            // personBindingSource
+            // 
+            this.personBindingSource.DataSource = typeof(Competence.Person);
             // 
             // panel2
             // 
@@ -199,7 +204,7 @@
             this.tableLayoutPanelFullWindow.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanelFullWindow.Name = "tableLayoutPanelFullWindow";
             this.tableLayoutPanelFullWindow.RowCount = 2;
-            this.tableLayoutPanelFullWindow.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 78F));
+            this.tableLayoutPanelFullWindow.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
             this.tableLayoutPanelFullWindow.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.81688F));
             this.tableLayoutPanelFullWindow.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 131F));
             this.tableLayoutPanelFullWindow.Size = new System.Drawing.Size(894, 448);
@@ -213,10 +218,10 @@
             this.tabControl1.Controls.Add(this.tabPageUsers);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(3, 81);
+            this.tabControl1.Location = new System.Drawing.Point(3, 60);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(888, 364);
+            this.tabControl1.Size = new System.Drawing.Size(888, 385);
             this.tabControl1.TabIndex = 13;
             // 
             // tabPagePeople
@@ -274,6 +279,52 @@
             this.dgvPeople.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPeople.Size = new System.Drawing.Size(788, 296);
             this.dgvPeople.TabIndex = 13;
+            // 
+            // pIDDataGridViewTextBoxColumn
+            // 
+            this.pIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.pIDDataGridViewTextBoxColumn.DataPropertyName = "p_ID";
+            this.pIDDataGridViewTextBoxColumn.HeaderText = "p_ID";
+            this.pIDDataGridViewTextBoxColumn.Name = "pIDDataGridViewTextBoxColumn";
+            this.pIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pIDDataGridViewTextBoxColumn.Visible = false;
+            this.pIDDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // pPersonRefDataGridViewTextBoxColumn
+            // 
+            this.pPersonRefDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.pPersonRefDataGridViewTextBoxColumn.DataPropertyName = "p_PersonRef";
+            this.pPersonRefDataGridViewTextBoxColumn.FillWeight = 15F;
+            this.pPersonRefDataGridViewTextBoxColumn.HeaderText = "Person reference";
+            this.pPersonRefDataGridViewTextBoxColumn.Name = "pPersonRefDataGridViewTextBoxColumn";
+            this.pPersonRefDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pFirstNameDataGridViewTextBoxColumn
+            // 
+            this.pFirstNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.pFirstNameDataGridViewTextBoxColumn.DataPropertyName = "p_FirstName";
+            this.pFirstNameDataGridViewTextBoxColumn.FillWeight = 35F;
+            this.pFirstNameDataGridViewTextBoxColumn.HeaderText = "First name";
+            this.pFirstNameDataGridViewTextBoxColumn.Name = "pFirstNameDataGridViewTextBoxColumn";
+            this.pFirstNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pLastNameDataGridViewTextBoxColumn
+            // 
+            this.pLastNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.pLastNameDataGridViewTextBoxColumn.DataPropertyName = "p_LastName";
+            this.pLastNameDataGridViewTextBoxColumn.FillWeight = 35F;
+            this.pLastNameDataGridViewTextBoxColumn.HeaderText = "Last name";
+            this.pLastNameDataGridViewTextBoxColumn.Name = "pLastNameDataGridViewTextBoxColumn";
+            this.pLastNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pDisplayDataGridViewTextBoxColumn
+            // 
+            this.pDisplayDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.pDisplayDataGridViewTextBoxColumn.DataPropertyName = "p_Display";
+            this.pDisplayDataGridViewTextBoxColumn.FillWeight = 15F;
+            this.pDisplayDataGridViewTextBoxColumn.HeaderText = "Signature";
+            this.pDisplayDataGridViewTextBoxColumn.Name = "pDisplayDataGridViewTextBoxColumn";
+            this.pDisplayDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // p_Active
             // 
@@ -421,6 +472,14 @@
             this.dgvSkills.TabIndex = 3;
             this.dgvSkills.SelectionChanged += new System.EventHandler(this.dgvSkills_SelectionChanged);
             // 
+            // sIDDataGridViewTextBoxColumn
+            // 
+            this.sIDDataGridViewTextBoxColumn.DataPropertyName = "s_ID";
+            this.sIDDataGridViewTextBoxColumn.HeaderText = "s_ID";
+            this.sIDDataGridViewTextBoxColumn.Name = "sIDDataGridViewTextBoxColumn";
+            this.sIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sIDDataGridViewTextBoxColumn.Visible = false;
+            // 
             // s_Category
             // 
             this.s_Category.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -452,6 +511,10 @@
             this.s_Description.ReadOnly = true;
             this.s_Description.ToolTipText = "A thorough definition of what this skill is";
             this.s_Description.Width = 5;
+            // 
+            // skillBindingSource
+            // 
+            this.skillBindingSource.DataSource = typeof(Competence.Skill);
             // 
             // panelSkillsButtons
             // 
@@ -523,6 +586,44 @@
             this.dgvSkillLevels.Size = new System.Drawing.Size(431, 256);
             this.dgvSkillLevels.TabIndex = 6;
             // 
+            // slLevelDataGridViewTextBoxColumn
+            // 
+            this.slLevelDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.slLevelDataGridViewTextBoxColumn.DataPropertyName = "sl_Level";
+            this.slLevelDataGridViewTextBoxColumn.FillWeight = 15F;
+            this.slLevelDataGridViewTextBoxColumn.HeaderText = "Level";
+            this.slLevelDataGridViewTextBoxColumn.Name = "slLevelDataGridViewTextBoxColumn";
+            this.slLevelDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // slIDDataGridViewTextBoxColumn
+            // 
+            this.slIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.slIDDataGridViewTextBoxColumn.DataPropertyName = "sl_ID";
+            this.slIDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.slIDDataGridViewTextBoxColumn.Name = "slIDDataGridViewTextBoxColumn";
+            this.slIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.slIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // slDisplayDataGridViewTextBoxColumn
+            // 
+            this.slDisplayDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.slDisplayDataGridViewTextBoxColumn.DataPropertyName = "sl_Display";
+            this.slDisplayDataGridViewTextBoxColumn.FillWeight = 25F;
+            this.slDisplayDataGridViewTextBoxColumn.HeaderText = "Display";
+            this.slDisplayDataGridViewTextBoxColumn.Name = "slDisplayDataGridViewTextBoxColumn";
+            this.slDisplayDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // slDescriptionDataGridViewTextBoxColumn
+            // 
+            this.slDescriptionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.slDescriptionDataGridViewTextBoxColumn.DataPropertyName = "sl_Description";
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.slDescriptionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.slDescriptionDataGridViewTextBoxColumn.FillWeight = 50F;
+            this.slDescriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.slDescriptionDataGridViewTextBoxColumn.Name = "slDescriptionDataGridViewTextBoxColumn";
+            this.slDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // sl_ValidityDurationMonths
             // 
             this.sl_ValidityDurationMonths.DataPropertyName = "sl_ValidityDurationMonths";
@@ -531,6 +632,34 @@
             this.sl_ValidityDurationMonths.Name = "sl_ValidityDurationMonths";
             this.sl_ValidityDurationMonths.ReadOnly = true;
             this.sl_ValidityDurationMonths.ToolTipText = "How long is the qualification valid";
+            // 
+            // slTrainingDocumentIDDataGridViewTextBoxColumn
+            // 
+            this.slTrainingDocumentIDDataGridViewTextBoxColumn.DataPropertyName = "sl_TrainingDocumentID";
+            this.slTrainingDocumentIDDataGridViewTextBoxColumn.HeaderText = "sl_TrainingDocumentID";
+            this.slTrainingDocumentIDDataGridViewTextBoxColumn.Name = "slTrainingDocumentIDDataGridViewTextBoxColumn";
+            this.slTrainingDocumentIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.slTrainingDocumentIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // slOrderDataGridViewTextBoxColumn
+            // 
+            this.slOrderDataGridViewTextBoxColumn.DataPropertyName = "sl_Order";
+            this.slOrderDataGridViewTextBoxColumn.HeaderText = "sl_Order";
+            this.slOrderDataGridViewTextBoxColumn.Name = "slOrderDataGridViewTextBoxColumn";
+            this.slOrderDataGridViewTextBoxColumn.ReadOnly = true;
+            this.slOrderDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // slSkillIDDataGridViewTextBoxColumn
+            // 
+            this.slSkillIDDataGridViewTextBoxColumn.DataPropertyName = "sl_SkillID";
+            this.slSkillIDDataGridViewTextBoxColumn.HeaderText = "sl_SkillID";
+            this.slSkillIDDataGridViewTextBoxColumn.Name = "slSkillIDDataGridViewTextBoxColumn";
+            this.slSkillIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.slSkillIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // skillLevelBindingSource
+            // 
+            this.skillLevelBindingSource.DataSource = typeof(Competence.SkillLevel);
             // 
             // panel4
             // 
@@ -579,7 +708,7 @@
             this.tabPageRoles.Location = new System.Drawing.Point(4, 22);
             this.tabPageRoles.Name = "tabPageRoles";
             this.tabPageRoles.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageRoles.Size = new System.Drawing.Size(880, 338);
+            this.tabPageRoles.Size = new System.Drawing.Size(880, 359);
             this.tabPageRoles.TabIndex = 3;
             this.tabPageRoles.Text = "Roles";
             this.tabPageRoles.UseVisualStyleBackColor = true;
@@ -598,7 +727,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 332F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(874, 332);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(874, 353);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // tableLayoutPanel3
@@ -617,7 +746,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(437, 332);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(437, 353);
             this.tableLayoutPanel3.TabIndex = 16;
             // 
             // panel5
@@ -626,7 +755,7 @@
             this.panel5.Controls.Add(this.btnRoleAdd);
             this.panel5.Controls.Add(this.btnRoleEdit);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(3, 300);
+            this.panel5.Location = new System.Drawing.Point(3, 321);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(431, 29);
             this.panel5.TabIndex = 14;
@@ -681,9 +810,35 @@
             this.dgvRoles.RowHeadersWidth = 20;
             this.dgvRoles.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvRoles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRoles.Size = new System.Drawing.Size(431, 256);
+            this.dgvRoles.Size = new System.Drawing.Size(431, 277);
             this.dgvRoles.TabIndex = 13;
             this.dgvRoles.SelectionChanged += new System.EventHandler(this.dgvRoles_SelectionChanged);
+            // 
+            // rDisplayDataGridViewTextBoxColumn
+            // 
+            this.rDisplayDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.rDisplayDataGridViewTextBoxColumn.DataPropertyName = "r_Display";
+            this.rDisplayDataGridViewTextBoxColumn.FillWeight = 40F;
+            this.rDisplayDataGridViewTextBoxColumn.HeaderText = "Display";
+            this.rDisplayDataGridViewTextBoxColumn.Name = "rDisplayDataGridViewTextBoxColumn";
+            this.rDisplayDataGridViewTextBoxColumn.ReadOnly = true;
+            this.rDisplayDataGridViewTextBoxColumn.ToolTipText = "Short handle for the role";
+            // 
+            // rDescriptionDataGridViewTextBoxColumn
+            // 
+            this.rDescriptionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.rDescriptionDataGridViewTextBoxColumn.DataPropertyName = "r_Description";
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.rDescriptionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            this.rDescriptionDataGridViewTextBoxColumn.FillWeight = 60F;
+            this.rDescriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.rDescriptionDataGridViewTextBoxColumn.Name = "rDescriptionDataGridViewTextBoxColumn";
+            this.rDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.rDescriptionDataGridViewTextBoxColumn.ToolTipText = "Detailed description of the role";
+            // 
+            // roleBindingSource
+            // 
+            this.roleBindingSource.DataSource = typeof(Competence.Role);
             // 
             // labelHeaderRoles
             // 
@@ -710,7 +865,7 @@
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(437, 332);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(437, 353);
             this.tableLayoutPanel5.TabIndex = 17;
             // 
             // tableLayoutPanel4
@@ -730,7 +885,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(437, 166);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(437, 176);
             this.tableLayoutPanel4.TabIndex = 17;
             // 
             // label2
@@ -750,7 +905,7 @@
             this.panel7.Controls.Add(this.btnRolePeopleDelete);
             this.panel7.Controls.Add(this.btnRolePeopleAdd);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(3, 134);
+            this.panel7.Location = new System.Drawing.Point(3, 144);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(431, 29);
             this.panel7.TabIndex = 17;
@@ -795,8 +950,12 @@
             this.dgvRolesPeople.RowHeadersWidth = 20;
             this.dgvRolesPeople.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvRolesPeople.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRolesPeople.Size = new System.Drawing.Size(431, 90);
+            this.dgvRolesPeople.Size = new System.Drawing.Size(431, 100);
             this.dgvRolesPeople.TabIndex = 18;
+            // 
+            // roleXPersonBindingSource
+            // 
+            this.roleXPersonBindingSource.DataSource = typeof(Competence.RoleXPerson);
             // 
             // tableLayoutPanel6
             // 
@@ -807,7 +966,7 @@
             this.tableLayoutPanel6.Controls.Add(this.panel9, 0, 2);
             this.tableLayoutPanel6.Controls.Add(this.dgvRoleReq, 0, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 166);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 176);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 3;
@@ -815,7 +974,7 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(437, 166);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(437, 177);
             this.tableLayoutPanel6.TabIndex = 17;
             // 
             // label4
@@ -835,7 +994,7 @@
             this.panel9.Controls.Add(this.btnReqDelete);
             this.panel9.Controls.Add(this.btnRoleReqAdd);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(3, 134);
+            this.panel9.Location = new System.Drawing.Point(3, 145);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(431, 29);
             this.panel9.TabIndex = 17;
@@ -865,8 +1024,11 @@
             this.dgvRoleReq.AllowUserToAddRows = false;
             this.dgvRoleReq.AllowUserToDeleteRows = false;
             this.dgvRoleReq.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRoleReq.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvRoleReq.AutoGenerateColumns = false;
-            this.dgvRoleReq.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvRoleReq.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dgvRoleReq.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.dgvRoleReq.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRoleReq.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -881,8 +1043,54 @@
             this.dgvRoleReq.RowHeadersWidth = 20;
             this.dgvRoleReq.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvRoleReq.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRoleReq.Size = new System.Drawing.Size(431, 90);
+            this.dgvRoleReq.Size = new System.Drawing.Size(431, 101);
             this.dgvRoleReq.TabIndex = 18;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "req_ID";
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            this.Column1.Width = 78;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "s_Display";
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewTextBoxColumn7.FillWeight = 40F;
+            this.dataGridViewTextBoxColumn7.HeaderText = "Skill";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // slLevelDataGridViewTextBoxColumn1
+            // 
+            this.slLevelDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.slLevelDataGridViewTextBoxColumn1.DataPropertyName = "sl_Level";
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.slLevelDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle7;
+            this.slLevelDataGridViewTextBoxColumn1.FillWeight = 20F;
+            this.slLevelDataGridViewTextBoxColumn1.HeaderText = "Level";
+            this.slLevelDataGridViewTextBoxColumn1.Name = "slLevelDataGridViewTextBoxColumn1";
+            this.slLevelDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // slDisplayDataGridViewTextBoxColumn1
+            // 
+            this.slDisplayDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.slDisplayDataGridViewTextBoxColumn1.DataPropertyName = "sl_Display";
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.slDisplayDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle8;
+            this.slDisplayDataGridViewTextBoxColumn1.FillWeight = 40F;
+            this.slDisplayDataGridViewTextBoxColumn1.HeaderText = "Display";
+            this.slDisplayDataGridViewTextBoxColumn1.Name = "slDisplayDataGridViewTextBoxColumn1";
+            this.slDisplayDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // roleXReqBindingSource
+            // 
+            this.roleXReqBindingSource.DataSource = typeof(Competence.RoleXReq);
             // 
             // tabPageUsers
             // 
@@ -936,6 +1144,61 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(788, 296);
             this.dataGridView1.TabIndex = 13;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "p_ID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "p_ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            this.dataGridViewTextBoxColumn1.Width = 60;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "p_PersonRef";
+            this.dataGridViewTextBoxColumn2.FillWeight = 15F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Person reference";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "p_FirstName";
+            this.dataGridViewTextBoxColumn3.FillWeight = 35F;
+            this.dataGridViewTextBoxColumn3.HeaderText = "First name";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "p_LastName";
+            this.dataGridViewTextBoxColumn4.FillWeight = 35F;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Last name";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "p_Display";
+            this.dataGridViewTextBoxColumn5.FillWeight = 15F;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Signature";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "p_FullInfo";
+            this.dataGridViewTextBoxColumn6.HeaderText = "p_FullInfo";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Visible = false;
+            this.dataGridViewTextBoxColumn6.Width = 78;
             // 
             // dataGridViewCheckBoxColumn1
             // 
@@ -1006,254 +1269,10 @@
             this.LabelApplicationHeader.ForeColor = System.Drawing.Color.GhostWhite;
             this.LabelApplicationHeader.Location = new System.Drawing.Point(3, 0);
             this.LabelApplicationHeader.Name = "LabelApplicationHeader";
-            this.LabelApplicationHeader.Size = new System.Drawing.Size(363, 78);
+            this.LabelApplicationHeader.Size = new System.Drawing.Size(363, 57);
             this.LabelApplicationHeader.TabIndex = 14;
             this.LabelApplicationHeader.Text = "Willo competence";
             this.LabelApplicationHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pIDDataGridViewTextBoxColumn
-            // 
-            this.pIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.pIDDataGridViewTextBoxColumn.DataPropertyName = "p_ID";
-            this.pIDDataGridViewTextBoxColumn.HeaderText = "p_ID";
-            this.pIDDataGridViewTextBoxColumn.Name = "pIDDataGridViewTextBoxColumn";
-            this.pIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pIDDataGridViewTextBoxColumn.Visible = false;
-            this.pIDDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // pPersonRefDataGridViewTextBoxColumn
-            // 
-            this.pPersonRefDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.pPersonRefDataGridViewTextBoxColumn.DataPropertyName = "p_PersonRef";
-            this.pPersonRefDataGridViewTextBoxColumn.FillWeight = 15F;
-            this.pPersonRefDataGridViewTextBoxColumn.HeaderText = "Person reference";
-            this.pPersonRefDataGridViewTextBoxColumn.Name = "pPersonRefDataGridViewTextBoxColumn";
-            this.pPersonRefDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pFirstNameDataGridViewTextBoxColumn
-            // 
-            this.pFirstNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.pFirstNameDataGridViewTextBoxColumn.DataPropertyName = "p_FirstName";
-            this.pFirstNameDataGridViewTextBoxColumn.FillWeight = 35F;
-            this.pFirstNameDataGridViewTextBoxColumn.HeaderText = "First name";
-            this.pFirstNameDataGridViewTextBoxColumn.Name = "pFirstNameDataGridViewTextBoxColumn";
-            this.pFirstNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pLastNameDataGridViewTextBoxColumn
-            // 
-            this.pLastNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.pLastNameDataGridViewTextBoxColumn.DataPropertyName = "p_LastName";
-            this.pLastNameDataGridViewTextBoxColumn.FillWeight = 35F;
-            this.pLastNameDataGridViewTextBoxColumn.HeaderText = "Last name";
-            this.pLastNameDataGridViewTextBoxColumn.Name = "pLastNameDataGridViewTextBoxColumn";
-            this.pLastNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pDisplayDataGridViewTextBoxColumn
-            // 
-            this.pDisplayDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.pDisplayDataGridViewTextBoxColumn.DataPropertyName = "p_Display";
-            this.pDisplayDataGridViewTextBoxColumn.FillWeight = 15F;
-            this.pDisplayDataGridViewTextBoxColumn.HeaderText = "Signature";
-            this.pDisplayDataGridViewTextBoxColumn.Name = "pDisplayDataGridViewTextBoxColumn";
-            this.pDisplayDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // personBindingSource
-            // 
-            this.personBindingSource.DataSource = typeof(Competence.Person);
-            // 
-            // sIDDataGridViewTextBoxColumn
-            // 
-            this.sIDDataGridViewTextBoxColumn.DataPropertyName = "s_ID";
-            this.sIDDataGridViewTextBoxColumn.HeaderText = "s_ID";
-            this.sIDDataGridViewTextBoxColumn.Name = "sIDDataGridViewTextBoxColumn";
-            this.sIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // skillBindingSource
-            // 
-            this.skillBindingSource.DataSource = typeof(Competence.Skill);
-            // 
-            // slLevelDataGridViewTextBoxColumn
-            // 
-            this.slLevelDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.slLevelDataGridViewTextBoxColumn.DataPropertyName = "sl_Level";
-            this.slLevelDataGridViewTextBoxColumn.FillWeight = 15F;
-            this.slLevelDataGridViewTextBoxColumn.HeaderText = "Level";
-            this.slLevelDataGridViewTextBoxColumn.Name = "slLevelDataGridViewTextBoxColumn";
-            this.slLevelDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // slIDDataGridViewTextBoxColumn
-            // 
-            this.slIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.slIDDataGridViewTextBoxColumn.DataPropertyName = "sl_ID";
-            this.slIDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.slIDDataGridViewTextBoxColumn.Name = "slIDDataGridViewTextBoxColumn";
-            this.slIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.slIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // slDisplayDataGridViewTextBoxColumn
-            // 
-            this.slDisplayDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.slDisplayDataGridViewTextBoxColumn.DataPropertyName = "sl_Display";
-            this.slDisplayDataGridViewTextBoxColumn.FillWeight = 25F;
-            this.slDisplayDataGridViewTextBoxColumn.HeaderText = "Display";
-            this.slDisplayDataGridViewTextBoxColumn.Name = "slDisplayDataGridViewTextBoxColumn";
-            this.slDisplayDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // slDescriptionDataGridViewTextBoxColumn
-            // 
-            this.slDescriptionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.slDescriptionDataGridViewTextBoxColumn.DataPropertyName = "sl_Description";
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.slDescriptionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
-            this.slDescriptionDataGridViewTextBoxColumn.FillWeight = 50F;
-            this.slDescriptionDataGridViewTextBoxColumn.HeaderText = "Description";
-            this.slDescriptionDataGridViewTextBoxColumn.Name = "slDescriptionDataGridViewTextBoxColumn";
-            this.slDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // slTrainingDocumentIDDataGridViewTextBoxColumn
-            // 
-            this.slTrainingDocumentIDDataGridViewTextBoxColumn.DataPropertyName = "sl_TrainingDocumentID";
-            this.slTrainingDocumentIDDataGridViewTextBoxColumn.HeaderText = "sl_TrainingDocumentID";
-            this.slTrainingDocumentIDDataGridViewTextBoxColumn.Name = "slTrainingDocumentIDDataGridViewTextBoxColumn";
-            this.slTrainingDocumentIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.slTrainingDocumentIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // slOrderDataGridViewTextBoxColumn
-            // 
-            this.slOrderDataGridViewTextBoxColumn.DataPropertyName = "sl_Order";
-            this.slOrderDataGridViewTextBoxColumn.HeaderText = "sl_Order";
-            this.slOrderDataGridViewTextBoxColumn.Name = "slOrderDataGridViewTextBoxColumn";
-            this.slOrderDataGridViewTextBoxColumn.ReadOnly = true;
-            this.slOrderDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // slSkillIDDataGridViewTextBoxColumn
-            // 
-            this.slSkillIDDataGridViewTextBoxColumn.DataPropertyName = "sl_SkillID";
-            this.slSkillIDDataGridViewTextBoxColumn.HeaderText = "sl_SkillID";
-            this.slSkillIDDataGridViewTextBoxColumn.Name = "slSkillIDDataGridViewTextBoxColumn";
-            this.slSkillIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.slSkillIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // skillLevelBindingSource
-            // 
-            this.skillLevelBindingSource.DataSource = typeof(Competence.SkillLevel);
-            // 
-            // rDisplayDataGridViewTextBoxColumn
-            // 
-            this.rDisplayDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.rDisplayDataGridViewTextBoxColumn.DataPropertyName = "r_Display";
-            this.rDisplayDataGridViewTextBoxColumn.FillWeight = 40F;
-            this.rDisplayDataGridViewTextBoxColumn.HeaderText = "Display";
-            this.rDisplayDataGridViewTextBoxColumn.Name = "rDisplayDataGridViewTextBoxColumn";
-            this.rDisplayDataGridViewTextBoxColumn.ReadOnly = true;
-            this.rDisplayDataGridViewTextBoxColumn.ToolTipText = "Short handle for the role";
-            // 
-            // rDescriptionDataGridViewTextBoxColumn
-            // 
-            this.rDescriptionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.rDescriptionDataGridViewTextBoxColumn.DataPropertyName = "r_Description";
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.rDescriptionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
-            this.rDescriptionDataGridViewTextBoxColumn.FillWeight = 60F;
-            this.rDescriptionDataGridViewTextBoxColumn.HeaderText = "Description";
-            this.rDescriptionDataGridViewTextBoxColumn.Name = "rDescriptionDataGridViewTextBoxColumn";
-            this.rDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.rDescriptionDataGridViewTextBoxColumn.ToolTipText = "Detailed description of the role";
-            // 
-            // roleBindingSource
-            // 
-            this.roleBindingSource.DataSource = typeof(Competence.Role);
-            // 
-            // pPersonRefDataGridViewTextBoxColumn1
-            // 
-            this.pPersonRefDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.pPersonRefDataGridViewTextBoxColumn1.DataPropertyName = "p_PersonRef";
-            this.pPersonRefDataGridViewTextBoxColumn1.FillWeight = 20F;
-            this.pPersonRefDataGridViewTextBoxColumn1.HeaderText = "p_PersonRef";
-            this.pPersonRefDataGridViewTextBoxColumn1.Name = "pPersonRefDataGridViewTextBoxColumn1";
-            this.pPersonRefDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // pFirstNameDataGridViewTextBoxColumn1
-            // 
-            this.pFirstNameDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.pFirstNameDataGridViewTextBoxColumn1.DataPropertyName = "p_FirstName";
-            this.pFirstNameDataGridViewTextBoxColumn1.FillWeight = 40F;
-            this.pFirstNameDataGridViewTextBoxColumn1.HeaderText = "p_FirstName";
-            this.pFirstNameDataGridViewTextBoxColumn1.Name = "pFirstNameDataGridViewTextBoxColumn1";
-            this.pFirstNameDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // pLastNameDataGridViewTextBoxColumn1
-            // 
-            this.pLastNameDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.pLastNameDataGridViewTextBoxColumn1.DataPropertyName = "p_LastName";
-            this.pLastNameDataGridViewTextBoxColumn1.FillWeight = 40F;
-            this.pLastNameDataGridViewTextBoxColumn1.HeaderText = "p_LastName";
-            this.pLastNameDataGridViewTextBoxColumn1.Name = "pLastNameDataGridViewTextBoxColumn1";
-            this.pLastNameDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // roleXPersonBindingSource
-            // 
-            this.roleXPersonBindingSource.DataSource = typeof(Competence.RoleXPerson);
-            // 
-            // roleXReqBindingSource
-            // 
-            this.roleXReqBindingSource.DataSource = typeof(Competence.RoleXReq);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "p_ID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "p_ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            this.dataGridViewTextBoxColumn1.Width = 60;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "p_PersonRef";
-            this.dataGridViewTextBoxColumn2.FillWeight = 15F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Person reference";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "p_FirstName";
-            this.dataGridViewTextBoxColumn3.FillWeight = 35F;
-            this.dataGridViewTextBoxColumn3.HeaderText = "First name";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "p_LastName";
-            this.dataGridViewTextBoxColumn4.FillWeight = 35F;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Last name";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "p_Display";
-            this.dataGridViewTextBoxColumn5.FillWeight = 15F;
-            this.dataGridViewTextBoxColumn5.HeaderText = "Signature";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "p_FullInfo";
-            this.dataGridViewTextBoxColumn6.HeaderText = "p_FullInfo";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Visible = false;
-            this.dataGridViewTextBoxColumn6.Width = 78;
             // 
             // dataAccessBindingSource
             // 
@@ -1263,46 +1282,32 @@
             // 
             this.skillCategoryBindingSource.DataSource = typeof(Competence.SkillCategory);
             // 
-            // Column1
+            // pPersonRefDataGridViewTextBoxColumn1
             // 
-            this.Column1.DataPropertyName = "req_ID";
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
+            this.pPersonRefDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.pPersonRefDataGridViewTextBoxColumn1.DataPropertyName = "p_PersonRef";
+            this.pPersonRefDataGridViewTextBoxColumn1.FillWeight = 20F;
+            this.pPersonRefDataGridViewTextBoxColumn1.HeaderText = "Person reference";
+            this.pPersonRefDataGridViewTextBoxColumn1.Name = "pPersonRefDataGridViewTextBoxColumn1";
+            this.pPersonRefDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn7
+            // pFirstNameDataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "s_Display";
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridViewTextBoxColumn7.FillWeight = 40F;
-            this.dataGridViewTextBoxColumn7.HeaderText = "Skill";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.pFirstNameDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.pFirstNameDataGridViewTextBoxColumn1.DataPropertyName = "p_FirstName";
+            this.pFirstNameDataGridViewTextBoxColumn1.FillWeight = 40F;
+            this.pFirstNameDataGridViewTextBoxColumn1.HeaderText = "First name";
+            this.pFirstNameDataGridViewTextBoxColumn1.Name = "pFirstNameDataGridViewTextBoxColumn1";
+            this.pFirstNameDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // slLevelDataGridViewTextBoxColumn1
+            // pLastNameDataGridViewTextBoxColumn1
             // 
-            this.slLevelDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.slLevelDataGridViewTextBoxColumn1.DataPropertyName = "sl_Level";
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.slLevelDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle6;
-            this.slLevelDataGridViewTextBoxColumn1.FillWeight = 20F;
-            this.slLevelDataGridViewTextBoxColumn1.HeaderText = "Level";
-            this.slLevelDataGridViewTextBoxColumn1.Name = "slLevelDataGridViewTextBoxColumn1";
-            this.slLevelDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // slDisplayDataGridViewTextBoxColumn1
-            // 
-            this.slDisplayDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.slDisplayDataGridViewTextBoxColumn1.DataPropertyName = "sl_Display";
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.slDisplayDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle7;
-            this.slDisplayDataGridViewTextBoxColumn1.FillWeight = 40F;
-            this.slDisplayDataGridViewTextBoxColumn1.HeaderText = "Display";
-            this.slDisplayDataGridViewTextBoxColumn1.Name = "slDisplayDataGridViewTextBoxColumn1";
-            this.slDisplayDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.pLastNameDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.pLastNameDataGridViewTextBoxColumn1.DataPropertyName = "p_LastName";
+            this.pLastNameDataGridViewTextBoxColumn1.FillWeight = 40F;
+            this.pLastNameDataGridViewTextBoxColumn1.HeaderText = "Last name";
+            this.pLastNameDataGridViewTextBoxColumn1.Name = "pLastNameDataGridViewTextBoxColumn1";
+            this.pLastNameDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // CompetenceUI
             // 
@@ -1317,6 +1322,7 @@
             this.ForeColor = System.Drawing.Color.Indigo;
             this.Name = "CompetenceUI";
             this.Text = "Competence";
+            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();
             this.tableLayoutPanelFullWindow.ResumeLayout(false);
             this.tableLayoutPanelFullWindow.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -1329,8 +1335,10 @@
             this.tableLayoutPanelSkills.ResumeLayout(false);
             this.tableLayoutPanelSkills.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSkills)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.skillBindingSource)).EndInit();
             this.panelSkillsButtons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSkillLevels)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.skillLevelBindingSource)).EndInit();
             this.panel4.ResumeLayout(false);
             this.tabPageRoles.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -1338,26 +1346,23 @@
             this.tableLayoutPanel3.PerformLayout();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRolesPeople)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roleXPersonBindingSource)).EndInit();
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
             this.panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoleReq)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roleXReqBindingSource)).EndInit();
             this.tabPageUsers.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.skillBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.skillLevelBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roleXPersonBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roleXReqBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataAccessBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.skillCategoryBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -1457,15 +1462,15 @@
         private System.Windows.Forms.DataGridView dgvRolesPeople;
         private System.Windows.Forms.DataGridView dgvRoleReq;
         private System.Windows.Forms.BindingSource roleXPersonBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pPersonRefDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pFirstNameDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pLastNameDataGridViewTextBoxColumn1;
         private System.Windows.Forms.BindingSource roleXReqBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn reqCommentsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn slLevelDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn slDisplayDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pPersonRefDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pFirstNameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pLastNameDataGridViewTextBoxColumn1;
     }
 }
 

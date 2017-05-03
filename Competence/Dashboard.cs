@@ -14,6 +14,8 @@ namespace Competence
     public partial class CompetenceUI : Form
     {
         internal DataAccess db = new DataAccess();
+        private int? skillIndex;
+        private int? roleIndex;
         public CompetenceUI()
         {
             InitializeComponent();
@@ -31,9 +33,10 @@ namespace Competence
         private void PopulateSkillsList()
         {
             //   DataAccess db = new DataAccess();
-            dgvSkills.Visible = false;
+            //dgvSkills.Visible = false;
             skillBindingSource.DataSource = db.GetSkills();
-            dgvSkills.Visible = true;
+            //skillIndex = dgvSkills.CurrentRow.Index;
+            //dgvSkills.Visible = true;
         }
 
         public void PopulatePeopleList()
@@ -139,7 +142,12 @@ namespace Competence
 
         private void dgvSkills_SelectionChanged(object sender, EventArgs e)
         {
-            skillLevelBindingSource.DataSource = db.GetSkillLevels(skillBindingSource.Current as Skill);
+            if (dgvSkills.CurrentRow.Index != skillIndex )
+            {
+                skillLevelBindingSource.DataSource = db.GetSkillLevels(skillBindingSource.Current as Skill);
+                //MessageBox.Show(skillIndex.ToString(), dgvSkills.CurrentRow.Index.ToString());
+                skillIndex = dgvSkills.CurrentRow.Index;
+            }
         }
         private void btnLevelAdd_Click(object sender, EventArgs e)
         {
@@ -232,8 +240,13 @@ namespace Competence
 
         private void dgvRoles_SelectionChanged(object sender, EventArgs e)
         {
-            roleXPersonBindingSource.DataSource = db.GetRoleXPerson(roleBindingSource.Current as Role);
-            roleXReqBindingSource.DataSource = db.GetReq(roleBindingSource.Current as Role);
+            if (dgvRoles.CurrentRow.Index != roleIndex)
+            {
+                roleXPersonBindingSource.DataSource = db.GetRoleXPerson(roleBindingSource.Current as Role);
+                roleXReqBindingSource.DataSource = db.GetReq(roleBindingSource.Current as Role);
+                //MessageBox.Show(roleIndex.ToString() + dgvRoles.CurrentRow.Index.ToString());
+                roleIndex = dgvRoles.CurrentRow.Index;
+            }
         }
 
         private void btnRolePeopleAdd_Click(object sender, EventArgs e)
